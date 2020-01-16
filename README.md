@@ -1,2 +1,0 @@
-# jpzhouchina.github.io
-blog
