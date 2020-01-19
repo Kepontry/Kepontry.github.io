@@ -1,47 +1,19 @@
+sudo: false
 language: node_js
-
-node_js: stable
-
-cache:
-    apt: true
-    directories:
-        - node_modules
-
-notifications:
-    email:
-        recipients:
-            - 1431629699@qq.com
-        on_success: change
-        on_failure: always
-
-# turn off the clone of submodules for change the SSH to HTTPS in .gitmodules to avoid the error
-git:
-  submodules: false
-        
-before_install:
-    # Use sed to replace the SSH URL with the public URL if .gitmodules exists
-    - test -e ".gitmodules" && sed -i 's/git@github.com:/https:\/\/github.com\//' .gitmodules
-    # update the submodule in repo by manual
-    - git submodule update --init --recursive
-    - export TZ='Asia/Shanghai'
-    - npm install hexo-cli -g
-    - chmod +x ./publish-to-gh-pages.sh
-
-install:
-    - npm install
-
-script:
-    - hexo clean
-    - hexo g
-
-after_script:
-    - ./publish-to-gh-pages.sh
-
+node_js:
+  - 10 
+cache: npm
 branches:
-    only:
-        - hexo
-
-env:
-    global:
-        # Github Pages
-        - GH_REF: github.com/jpzhouchina/jpzhouchina.github.io.git
+  only:
+    - hexo # 当hexo分支有新的commit时执行 
+script:
+  - hexo generate 
+deploy:
+  provider: pages
+  skip-cleanup: true
+  local-dir: public
+  target-branch: master # 注意这里是部署到master, 默认是到gh-pages
+  github-token: $GH_TOKEN
+  keep-history: true
+  on:
+    branch: hexo
