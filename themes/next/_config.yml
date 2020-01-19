@@ -588,7 +588,7 @@ comments:
 
 # Disqus
 disqus:
-  enable: true
+  enable: false
   shortname: zhoujiapeng
   count: true
   #post_meta_order: 0
@@ -617,9 +617,9 @@ changyan:
 # Valine
 # For more information: https://valine.js.org, https://github.com/xCss/Valine
 valine:
-  enable: false
-  appid: # Your leancloud application appid
-  appkey: # Your leancloud application appkey
+  enable: true
+  appid: WUAcaCy7z47EfHHnamMQ3SW1-gzGzoHsz
+  appkey: B3xvyoE5BqKECNmWmVOwo6g8
   notify: false # Mail notifier
   verify: false # Verification code
   placeholder: Just go go # Comment box placeholder
