@@ -1,3 +1,8 @@
+---
+title: 用Travis CI实现自动部署GitHub Pages博客
+date: 2020-01-19 21:10:33
+tags: Travis CI 教程
+---
 # 用Travis CI实现自动部署GitHub Pages博客
 
 ## 不用Travis CI实现的一般方式
