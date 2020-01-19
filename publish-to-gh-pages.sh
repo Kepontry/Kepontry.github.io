@@ -5,7 +5,7 @@ set -ev
 # get clone master
 git clone https://${GH_REF} .deploy_git
 cd .deploy_git
-git checkout master
+git checkout hexo
 
 cd ../
 mv .deploy_git/.git/ ./public/
