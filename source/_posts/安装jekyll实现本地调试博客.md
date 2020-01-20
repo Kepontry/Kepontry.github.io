@@ -1,7 +1,11 @@
 ---
 title: 安装jekyll实现本地调试博客
 date: 2020-01-15 17:30:41
-tags: 教程 jekyll
+tags: 
+ - 教程 
+ - jekyll
+description: " "
+categories: 博客搭建
 ---
 # 安装jekyll实现本地调试博客
 

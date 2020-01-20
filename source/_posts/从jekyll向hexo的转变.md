@@ -1,8 +1,13 @@
 ---
 title: 从jekyll向hexo的转变
 date: 2020-01-17 21:00:05
-tags: 使用心得 感想
+tags: 
+ - 教程
+ - 感想
+description: " "
+categories: 博客搭建
 ---
+
 # 从jekyll向hexo的转变
 
 ### 放弃jekyll的原因
@@ -19,7 +24,6 @@ tags: 使用心得 感想
 **注意：**
 
 - 网上的很多教程都是mac或者linux版本的，和windows的安装过程略有差异，windows须在git bash中运行
-- 此篇博客写于2020年1月15日，请读者注意时效
 
 **具体过程**
 
