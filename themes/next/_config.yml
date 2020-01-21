@@ -683,7 +683,7 @@ google_analytics:
   only_pageview: false
 
 # Baidu Analytics
-baidu_analytics: # <app_id>
+baidu_analytics: 81e421876cdda7a7d455957da651f273
 
 # Growingio Analytics
 growingio_analytics: # <project_id>
