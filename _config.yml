@@ -97,5 +97,12 @@ theme: next
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
+
+# 添加站点地图sitemap
+sitemap:
+  path: sitemap.xml
+baidusitemap:
+  path: baidusitemap.xml
+  
 deploy:
   type: ''
