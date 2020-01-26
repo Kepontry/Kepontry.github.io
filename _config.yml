@@ -91,7 +91,7 @@ exclude:
 ignore:
 
 # Extensions
-## Plugins: https://hexo.io/plugins/
+Plugins: hexo-generator-sitemap
 ## Themes: https://hexo.io/themes/
 theme: next
 
@@ -101,8 +101,6 @@ theme: next
 # 添加站点地图sitemap
 sitemap:
   path: sitemap.xml
-baidusitemap:
-  path: baidusitemap.xml
   
 deploy:
   type: ''
