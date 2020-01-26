@@ -6,6 +6,7 @@ cache: npm
 branches:
   only:
     - hexo # 当hexo分支有新的commit时执行 
+install: npm install hexo-generator-sitemap --save
 script:
   - hexo generate 
 deploy:
