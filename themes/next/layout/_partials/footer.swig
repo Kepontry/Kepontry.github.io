@@ -70,5 +70,5 @@
   </div>
 {%- endif %}
 
-<span><a href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral" target="_blank" rel="nofollow"><img src="https://www.laobuluo.com/banner/upyun.png">
+<span><a href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral" target="_blank" rel="nofollow"><img src="images/upyunlogo.png">
 {{- next_inject('footer') }}
