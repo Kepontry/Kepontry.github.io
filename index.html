@@ -15,36 +15,10 @@
 
 <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
 
-
 <script id="hexo-configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    hostname: new URL('https://Kepontry.github.io').hostname,
-    root: '/',
-    scheme: 'Gemini',
-    version: '7.7.0',
-    exturl: false,
-    sidebar: {"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},
-    copycode: {"enable":false,"show_result":false,"style":null},
-    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
-    bookmark: {"enable":true,"color":"#222","save":"auto"},
-    fancybox: false,
-    mediumzoom: false,
-    lazyload: false,
-    pangu: false,
-    comments: {"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},
-    algolia: {
-      appID: '',
-      apiKey: '',
-      indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    },
-    localsearch: {"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
-    path: '',
-    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}
-  };
-</script>
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"kepontry.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
 
   <meta name="description" content="Just keep on trying!">
 <meta property="og:type" content="website">
@@ -63,8 +37,9 @@
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome: true,
-    isPost: false
+    isHome : true,
+    isPost : false,
+    lang   : 'zh-CN'
   };
 </script>
 
@@ -125,17 +100,6 @@
 
     <header class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-container">
-  <div class="site-meta">
-
-    <div>
-      <a href="/" class="brand" rel="start">
-        <span class="logo-line-before"><i></i></span>
-        <span class="site-title">Kepontry's Blog</span>
-        <span class="logo-line-after"><i></i></span>
-      </a>
-    </div>
-  </div>
-
   <div class="site-nav-toggle">
     <div class="toggle" aria-label="切换导航栏">
       <span class="toggle-line toggle-line-first"></span>
@@ -143,11 +107,26 @@
       <span class="toggle-line toggle-line-last"></span>
     </div>
   </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Kepontry's Blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
 </div>
 
 
+
+
 <nav class="site-nav">
-  
   <ul id="menu" class="menu">
         <li class="menu-item menu-item-home">
 
@@ -170,8 +149,11 @@
 
   </li>
   </ul>
-
 </nav>
+
+
+
+
 </div>
     </header>
 
@@ -191,14 +173,12 @@
         <div class="content-wrap">
           
 
-          <div class="content">
+          <div class="content index posts-expand">
             
-
-  <div class="posts-expand">
-        
+      
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://kepontry.github.io/2020/02/09/2020-02-09-Matlab%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -211,10 +191,10 @@
       <meta itemprop="name" content="Kepontry's Blog">
     </span>
       <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
+        <h2 class="post-title" itemprop="name headline">
           
             <a href="/2020/02/09/2020-02-09-Matlab%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-title-link" itemprop="url">Matlab学习笔记</a>
-        </h1>
+        </h2>
 
         <div class="post-meta">
             <span class="post-meta-item">
@@ -235,7 +215,7 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/2020/02/09/2020-02-09-Matlab%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/#comments" itemprop="discussionUrl">
+    <a title="valine" href="/2020/02/09/2020-02-09-Matlab%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/#valine-comments" itemprop="discussionUrl">
       <span class="post-comments-count valine-comment-count" data-xid="/2020/02/09/2020-02-09-Matlab%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="commentCount"></span>
     </a>
   </span>
@@ -251,7 +231,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-           
+          <p> </p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2020/02/09/2020-02-09-Matlab%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
@@ -274,10 +254,10 @@
   
   
 
-        
+      
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://kepontry.github.io/2020/01/26/2020-01-26-%E8%A7%A3%E5%86%B3Hexo+Next+Travis%20CI%E5%8D%9A%E5%AE%A2%E6%9B%B4%E6%96%B0%E6%97%B6%E9%97%B4%E9%97%AE%E9%A2%98/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -290,10 +270,10 @@
       <meta itemprop="name" content="Kepontry's Blog">
     </span>
       <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
+        <h2 class="post-title" itemprop="name headline">
           
             <a href="/2020/01/26/2020-01-26-%E8%A7%A3%E5%86%B3Hexo+Next+Travis%20CI%E5%8D%9A%E5%AE%A2%E6%9B%B4%E6%96%B0%E6%97%B6%E9%97%B4%E9%97%AE%E9%A2%98/" class="post-title-link" itemprop="url">解决Hexo+Next+Travis CI博客更新时间问题</a>
-        </h1>
+        </h2>
 
         <div class="post-meta">
             <span class="post-meta-item">
@@ -311,9 +291,7 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" itemprop="url" rel="index">
-                    <span itemprop="name">博客搭建</span>
-                  </a>
+                  <a href="/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" itemprop="url" rel="index"><span itemprop="name">博客搭建</span></a>
                 </span>
             </span>
 
@@ -326,7 +304,7 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/2020/01/26/2020-01-26-%E8%A7%A3%E5%86%B3Hexo+Next+Travis%20CI%E5%8D%9A%E5%AE%A2%E6%9B%B4%E6%96%B0%E6%97%B6%E9%97%B4%E9%97%AE%E9%A2%98/#comments" itemprop="discussionUrl">
+    <a title="valine" href="/2020/01/26/2020-01-26-%E8%A7%A3%E5%86%B3Hexo+Next+Travis%20CI%E5%8D%9A%E5%AE%A2%E6%9B%B4%E6%96%B0%E6%97%B6%E9%97%B4%E9%97%AE%E9%A2%98/#valine-comments" itemprop="discussionUrl">
       <span class="post-comments-count valine-comment-count" data-xid="/2020/01/26/2020-01-26-%E8%A7%A3%E5%86%B3Hexo+Next+Travis%20CI%E5%8D%9A%E5%AE%A2%E6%9B%B4%E6%96%B0%E6%97%B6%E9%97%B4%E9%97%AE%E9%A2%98/" itemprop="commentCount"></span>
     </a>
   </span>
@@ -342,7 +320,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-           
+          <p> </p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2020/01/26/2020-01-26-%E8%A7%A3%E5%86%B3Hexo+Next+Travis%20CI%E5%8D%9A%E5%AE%A2%E6%9B%B4%E6%96%B0%E6%97%B6%E9%97%B4%E9%97%AE%E9%A2%98/">
@@ -365,10 +343,10 @@
   
   
 
-        
+      
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://kepontry.github.io/2020/01/23/2020-01-23-hexo%E8%87%AA%E5%8A%A8%E7%94%9F%E6%88%90%E9%98%85%E8%AF%BB%E5%85%A8%E6%96%87/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -381,10 +359,10 @@
       <meta itemprop="name" content="Kepontry's Blog">
     </span>
       <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
+        <h2 class="post-title" itemprop="name headline">
           
             <a href="/2020/01/23/2020-01-23-hexo%E8%87%AA%E5%8A%A8%E7%94%9F%E6%88%90%E9%98%85%E8%AF%BB%E5%85%A8%E6%96%87/" class="post-title-link" itemprop="url">hexo自动生成阅读全文</a>
-        </h1>
+        </h2>
 
         <div class="post-meta">
             <span class="post-meta-item">
@@ -408,9 +386,7 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" itemprop="url" rel="index">
-                    <span itemprop="name">博客搭建</span>
-                  </a>
+                  <a href="/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" itemprop="url" rel="index"><span itemprop="name">博客搭建</span></a>
                 </span>
             </span>
 
@@ -423,7 +399,7 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/2020/01/23/2020-01-23-hexo%E8%87%AA%E5%8A%A8%E7%94%9F%E6%88%90%E9%98%85%E8%AF%BB%E5%85%A8%E6%96%87/#comments" itemprop="discussionUrl">
+    <a title="valine" href="/2020/01/23/2020-01-23-hexo%E8%87%AA%E5%8A%A8%E7%94%9F%E6%88%90%E9%98%85%E8%AF%BB%E5%85%A8%E6%96%87/#valine-comments" itemprop="discussionUrl">
       <span class="post-comments-count valine-comment-count" data-xid="/2020/01/23/2020-01-23-hexo%E8%87%AA%E5%8A%A8%E7%94%9F%E6%88%90%E9%98%85%E8%AF%BB%E5%85%A8%E6%96%87/" itemprop="commentCount"></span>
     </a>
   </span>
@@ -439,7 +415,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-           
+          <p> </p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2020/01/23/2020-01-23-hexo%E8%87%AA%E5%8A%A8%E7%94%9F%E6%88%90%E9%98%85%E8%AF%BB%E5%85%A8%E6%96%87/">
@@ -462,10 +438,10 @@
   
   
 
-        
+      
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://kepontry.github.io/2020/01/19/2020-01-19-Travis%20CI%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2%E5%8D%9A%E5%AE%A2%E5%88%B0GitHub%20Pages%E7%9A%84%E5%88%86%E6%94%AF/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -478,10 +454,10 @@
       <meta itemprop="name" content="Kepontry's Blog">
     </span>
       <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
+        <h2 class="post-title" itemprop="name headline">
           
             <a href="/2020/01/19/2020-01-19-Travis%20CI%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2%E5%8D%9A%E5%AE%A2%E5%88%B0GitHub%20Pages%E7%9A%84%E5%88%86%E6%94%AF/" class="post-title-link" itemprop="url">用Travis CI实现自动部署GitHub Pages博客</a>
-        </h1>
+        </h2>
 
         <div class="post-meta">
             <span class="post-meta-item">
@@ -505,9 +481,7 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" itemprop="url" rel="index">
-                    <span itemprop="name">博客搭建</span>
-                  </a>
+                  <a href="/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" itemprop="url" rel="index"><span itemprop="name">博客搭建</span></a>
                 </span>
             </span>
 
@@ -520,7 +494,7 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/2020/01/19/2020-01-19-Travis%20CI%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2%E5%8D%9A%E5%AE%A2%E5%88%B0GitHub%20Pages%E7%9A%84%E5%88%86%E6%94%AF/#comments" itemprop="discussionUrl">
+    <a title="valine" href="/2020/01/19/2020-01-19-Travis%20CI%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2%E5%8D%9A%E5%AE%A2%E5%88%B0GitHub%20Pages%E7%9A%84%E5%88%86%E6%94%AF/#valine-comments" itemprop="discussionUrl">
       <span class="post-comments-count valine-comment-count" data-xid="/2020/01/19/2020-01-19-Travis%20CI%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2%E5%8D%9A%E5%AE%A2%E5%88%B0GitHub%20Pages%E7%9A%84%E5%88%86%E6%94%AF/" itemprop="commentCount"></span>
     </a>
   </span>
@@ -536,7 +510,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-           
+          <p> </p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2020/01/19/2020-01-19-Travis%20CI%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2%E5%8D%9A%E5%AE%A2%E5%88%B0GitHub%20Pages%E7%9A%84%E5%88%86%E6%94%AF/">
@@ -559,10 +533,10 @@
   
   
 
-        
+      
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://kepontry.github.io/2020/01/17/2020-01-17-%E4%BB%8Ejekyll%E5%90%91hexo%E7%9A%84%E8%BD%AC%E5%8F%98/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -575,10 +549,10 @@
       <meta itemprop="name" content="Kepontry's Blog">
     </span>
       <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
+        <h2 class="post-title" itemprop="name headline">
           
             <a href="/2020/01/17/2020-01-17-%E4%BB%8Ejekyll%E5%90%91hexo%E7%9A%84%E8%BD%AC%E5%8F%98/" class="post-title-link" itemprop="url">从jekyll向hexo的转变</a>
-        </h1>
+        </h2>
 
         <div class="post-meta">
             <span class="post-meta-item">
@@ -602,9 +576,7 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" itemprop="url" rel="index">
-                    <span itemprop="name">博客搭建</span>
-                  </a>
+                  <a href="/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" itemprop="url" rel="index"><span itemprop="name">博客搭建</span></a>
                 </span>
             </span>
 
@@ -617,7 +589,7 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/2020/01/17/2020-01-17-%E4%BB%8Ejekyll%E5%90%91hexo%E7%9A%84%E8%BD%AC%E5%8F%98/#comments" itemprop="discussionUrl">
+    <a title="valine" href="/2020/01/17/2020-01-17-%E4%BB%8Ejekyll%E5%90%91hexo%E7%9A%84%E8%BD%AC%E5%8F%98/#valine-comments" itemprop="discussionUrl">
       <span class="post-comments-count valine-comment-count" data-xid="/2020/01/17/2020-01-17-%E4%BB%8Ejekyll%E5%90%91hexo%E7%9A%84%E8%BD%AC%E5%8F%98/" itemprop="commentCount"></span>
     </a>
   </span>
@@ -633,7 +605,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-           
+          <p> </p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2020/01/17/2020-01-17-%E4%BB%8Ejekyll%E5%90%91hexo%E7%9A%84%E8%BD%AC%E5%8F%98/">
@@ -656,10 +628,10 @@
   
   
 
-        
+      
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://kepontry.github.io/2020/01/15/2020-01-15-%E5%AE%89%E8%A3%85jekyll%E5%AE%9E%E7%8E%B0%E6%9C%AC%E5%9C%B0%E8%B0%83%E8%AF%95%E5%8D%9A%E5%AE%A2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -672,10 +644,10 @@
       <meta itemprop="name" content="Kepontry's Blog">
     </span>
       <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
+        <h2 class="post-title" itemprop="name headline">
           
             <a href="/2020/01/15/2020-01-15-%E5%AE%89%E8%A3%85jekyll%E5%AE%9E%E7%8E%B0%E6%9C%AC%E5%9C%B0%E8%B0%83%E8%AF%95%E5%8D%9A%E5%AE%A2/" class="post-title-link" itemprop="url">安装jekyll实现本地调试博客</a>
-        </h1>
+        </h2>
 
         <div class="post-meta">
             <span class="post-meta-item">
@@ -699,9 +671,7 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" itemprop="url" rel="index">
-                    <span itemprop="name">博客搭建</span>
-                  </a>
+                  <a href="/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" itemprop="url" rel="index"><span itemprop="name">博客搭建</span></a>
                 </span>
             </span>
 
@@ -714,7 +684,7 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/2020/01/15/2020-01-15-%E5%AE%89%E8%A3%85jekyll%E5%AE%9E%E7%8E%B0%E6%9C%AC%E5%9C%B0%E8%B0%83%E8%AF%95%E5%8D%9A%E5%AE%A2/#comments" itemprop="discussionUrl">
+    <a title="valine" href="/2020/01/15/2020-01-15-%E5%AE%89%E8%A3%85jekyll%E5%AE%9E%E7%8E%B0%E6%9C%AC%E5%9C%B0%E8%B0%83%E8%AF%95%E5%8D%9A%E5%AE%A2/#valine-comments" itemprop="discussionUrl">
       <span class="post-comments-count valine-comment-count" data-xid="/2020/01/15/2020-01-15-%E5%AE%89%E8%A3%85jekyll%E5%AE%9E%E7%8E%B0%E6%9C%AC%E5%9C%B0%E8%B0%83%E8%AF%95%E5%8D%9A%E5%AE%A2/" itemprop="commentCount"></span>
     </a>
   </span>
@@ -730,7 +700,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-           
+          <p> </p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2020/01/15/2020-01-15-%E5%AE%89%E8%A3%85jekyll%E5%AE%9E%E7%8E%B0%E6%9C%AC%E5%9C%B0%E8%B0%83%E8%AF%95%E5%8D%9A%E5%AE%A2/">
@@ -753,10 +723,10 @@
   
   
 
-        
+      
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://kepontry.github.io/2020/01/12/2020-01-12-%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -769,10 +739,10 @@
       <meta itemprop="name" content="Kepontry's Blog">
     </span>
       <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
+        <h2 class="post-title" itemprop="name headline">
           
             <a href="/2020/01/12/2020-01-12-%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/" class="post-title-link" itemprop="url">第一篇博客</a>
-        </h1>
+        </h2>
 
         <div class="post-meta">
             <span class="post-meta-item">
@@ -796,9 +766,7 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%84%9F%E6%83%B3%E5%BF%83%E5%BE%97/" itemprop="url" rel="index">
-                    <span itemprop="name">感想心得</span>
-                  </a>
+                  <a href="/categories/%E6%84%9F%E6%83%B3%E5%BF%83%E5%BE%97/" itemprop="url" rel="index"><span itemprop="name">感想心得</span></a>
                 </span>
             </span>
 
@@ -811,7 +779,7 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/2020/01/12/2020-01-12-%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/#comments" itemprop="discussionUrl">
+    <a title="valine" href="/2020/01/12/2020-01-12-%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/#valine-comments" itemprop="discussionUrl">
       <span class="post-comments-count valine-comment-count" data-xid="/2020/01/12/2020-01-12-%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/" itemprop="commentCount"></span>
     </a>
   </span>
@@ -827,7 +795,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          写第一篇博客的一些感想
+          <p>写第一篇博客的一些感想</p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2020/01/12/2020-01-12-%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/">
@@ -850,7 +818,6 @@
   
   
 
-  </div>
 
   
 
@@ -861,7 +828,7 @@
 
 <script>
   window.addEventListener('tabs:register', () => {
-    let activeClass = CONFIG.comments.activeClass;
+    let { activeClass } = CONFIG.comments;
     if (CONFIG.comments.storage) {
       activeClass = localStorage.getItem('comments_active') || activeClass;
     }
@@ -965,22 +932,19 @@
       <div class="footer-inner">
         
 
+        
+
 <div class="copyright">
   
-  &copy; 
-  <span itemprop="copyrightYear">2020</span>
+  &copy; 2020 – 
+  <span itemprop="copyrightYear">2021</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">Kepontry</span>
 </div>
-  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v4.2.0
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
   </div>
-  <span class="post-meta-divider">|</span>
-  <div class="theme-info">主题 – <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.7.0
-  </div>
-
-<span><a href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral" target="_blank" rel="nofollow"><img src="images/upyunlogo.png">
 
         
 <div class="busuanzi-count">
@@ -1074,20 +1038,20 @@ NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
       return GUEST.includes(item);
     });
     new Valine({
-      el: '#valine-comments',
-      verify: false,
-      notify: false,
-      appId: 'WUAcaCy7z47EfHHnamMQ3SW1-gzGzoHsz',
-      appKey: 'B3xvyoE5BqKECNmWmVOwo6g8',
+      el         : '#valine-comments',
+      verify     : false,
+      notify     : false,
+      appId      : 'WUAcaCy7z47EfHHnamMQ3SW1-gzGzoHsz',
+      appKey     : 'B3xvyoE5BqKECNmWmVOwo6g8',
       placeholder: "Just go go",
-      avatar: 'mm',
-      meta: guest,
-      pageSize: '10' || 10,
-      visitor: false,
-      lang: '' || 'zh-cn',
-      path: location.pathname,
-      recordIP: false,
-      serverURLs: ''
+      avatar     : 'mm',
+      meta       : guest,
+      pageSize   : '10' || 10,
+      visitor    : false,
+      lang       : '' || 'zh-cn',
+      path       : location.pathname,
+      recordIP   : false,
+      serverURLs : ''
     });
   }, window.Valine);
 });
